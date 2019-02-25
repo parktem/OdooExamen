@@ -8,7 +8,7 @@ class videojuego(models.Model):
     dineroGenerado = fields.Integer(string="Dinero Generado")
     capturas = fields.Boolean(string="Capturas", compute='modificarCaptura')
     saga_id = fields.Many2one("examen.saga", string="Saga")
-    compania_id = fields.Many2one("examen.compania", string="Compania")
+    compania_id = fields.Many2one("base.empresa", string="Compania")
     genero_id = fields.Many2one("examen.genero", string="Genero")
     consola_id = fields.Many2one("examen.consola", string="Consola")
 

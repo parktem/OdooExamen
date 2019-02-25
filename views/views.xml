@@ -16,7 +16,7 @@
             <field name="name">genero.tree</field>
             <field name="model">examen.genero</field>
             <field name="arch" type="xml">
-                <tree string="Saga Tree">
+                <tree string="Genero Tree">
                     <field name="name"/>
                     <field name="videojuego_ids"/>
                 </tree>
@@ -27,7 +27,7 @@
             <field name="name">genero.form</field>
             <field name="model">examen.genero</field>
             <field name="arch" type="xml">
-                <form string="Saga Form">
+                <form string="Genero Form">
                     <group>
                         <field name="name"/>
                         <field name="videojuego_ids"/>
@@ -95,8 +95,9 @@
         <record model='ir.ui.view' id='compania_form_view'>
             <field name="name">compania.form</field>
             <field name="model">base.empresa</field>
+            <field name="inherit_id" ref="baseModule.empresa_form_view"/>
             <field name="arch" type="xml">
-                <form string="Compania Form">
+                <form string="Empresa Form">
                     <group>
                         <field name="name"/>
                         <field name="videojuego_ids"/>
