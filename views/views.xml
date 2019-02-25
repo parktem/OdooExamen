@@ -182,7 +182,7 @@
                         <field name="precio"/>
                         <field name="numeroUnidades"/>
                         <field name="dineroGenerado"/>
-                        <field name="capturas"/>
+                        <field name="capturas" readonly="1"/>
                         <field name="compania_id"/>
                         <field name="saga_id"/>
                         <field name="genero_id"/>

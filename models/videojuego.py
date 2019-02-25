@@ -6,7 +6,7 @@ class videojuego(models.Model):
     precio = fields.Integer(string="Precio")
     numeroUnidades = fields.Integer(string="Numero Unidades")
     dineroGenerado = fields.Integer(string="Dinero Generado")
-    capturas = fields.Boolean(string="Capturas", 'readonly': True)
+    capturas = fields.Boolean(string="Capturas")
     saga_id = fields.Many2one("examen.saga", string="Saga")
     compania_id = fields.Many2one("base.empresa", string="Compania")
     genero_id = fields.Many2one("examen.genero", string="Genero")
@@ -15,10 +15,7 @@ class videojuego(models.Model):
 
     @api.one
     def modificarCaptura(self):
-        if self.capturas:
-            self.capturas = False
-        if not self.capturas:
-            self.capturas = True
+        self.capturas = not self.capturas
 
 
     @api.onchange('numeroUnidades', 'precio')
