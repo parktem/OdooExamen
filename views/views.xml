@@ -2,21 +2,90 @@
 
     <data>
 
-         <!-- CONSOLA -->
+
+        <!-- GENERO -->
+
+
+        <record model="ir.actions.act_window" id="action_genero">
+            <field name="name">genero</field>
+            <field name="res_model">examen.genero</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model='ir.ui.view' id='genero_tree_view'>
+            <field name="name">genero.tree</field>
+            <field name="model">examen.genero</field>
+            <field name="arch" type="xml">
+                <tree string="Saga Tree">
+                    <field name="name"/>
+                    <field name="videojuego_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='genero_form_view'>
+            <field name="name">genero.form</field>
+            <field name="model">examen.genero</field>
+            <field name="arch" type="xml">
+                <form string="Saga Form">
+                    <group>
+                        <field name="name"/>
+                        <field name="videojuego_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- SAGA -->
+
+
+        <record model="ir.actions.act_window" id="action_saga">
+            <field name="name">saga</field>
+            <field name="res_model">examen.saga</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model='ir.ui.view' id='saga_tree_view'>
+            <field name="name">saga.tree</field>
+            <field name="model">examen.saga</field>
+            <field name="arch" type="xml">
+                <tree string="Saga Tree">
+                    <field name="name"/>
+                    <field name="videojuego_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='saga_form_view'>
+            <field name="name">saga.form</field>
+            <field name="model">examen.saga</field>
+            <field name="arch" type="xml">
+                <form string="Saga Form">
+                    <group>
+                        <field name="name"/>
+                        <field name="videojuego_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+
+        <!-- COMPANIA -->
 
 
         <record model="ir.actions.act_window" id="action_compania">
-            <field name="name">consola</field>
-            <field name="res_model">examen.consola</field>
+            <field name="name">compania</field>
+            <field name="res_model">base.empresa</field>
             <field name="view_mode">tree,form</field>
         </record>
 
         <record model='ir.ui.view' id='compania_tree_view'>
-            <field name="name">consola.tree</field>
-            <field name="model">examen.consola</field>
+            <field name="name">compania.tree</field>
+            <field name="model">base.empresa</field>
             <field name="arch" type="xml">
                 <tree string="Compania Tree">
-                    <field name="nombreEntidad"/>
                     <field name="name"/>
                     <field name="videojuego_ids"/>
                 </tree>
@@ -24,12 +93,11 @@
         </record>
 
         <record model='ir.ui.view' id='compania_form_view'>
-            <field name="name">consola.form</field>
-            <field name="model">examen.consola</field>
+            <field name="name">compania.form</field>
+            <field name="model">base.empresa</field>
             <field name="arch" type="xml">
                 <form string="Compania Form">
                     <group>
-                        <field name="nombreEntidad"/>
                         <field name="name"/>
                         <field name="videojuego_ids"/>
                     </group>
@@ -137,7 +205,8 @@
         <menuitem name="videojuego" id="menu_videojuego" parent="menu" action="action_videojuego"/>
         <menuitem name="consola" id="menu_consola" parent="menu" action="action_consola"/>
         <menuitem name="compania" id="menu_compania" parent="menu" action="action_compania"/>
-
+        <menuitem name="saga" id="menu_saga" parent="menu" action="action_saga"/>
+        <menuitem name="genero" id="menu_genero" parent="menu" action="action_genero"/>
     </data>
 
 </odoo>
