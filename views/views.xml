@@ -1,0 +1,22 @@
+<odoo>
+
+    <data>
+
+
+        <!-- Top menu item -->
+
+        <menuitem name="Colegio1" id="menu_root"/>
+
+        <!-- menu categories -->
+
+        <menuitem name="Menu" id="menu" parent="menu_root"/>
+
+        <!-- actions -->
+
+        <menuitem name="colegio" id="menu_colegio" parent="menu" action="action_colegio"/>
+        <menuitem name="clase" id="menu_clase" parent="menu" action="action_clase"/>
+        <menuitem name="estudiante" id="menu_estudiante" parent="menu" action="action_estudiante"/>
+
+    </data>
+
+</odoo>
