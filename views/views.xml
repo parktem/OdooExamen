@@ -2,10 +2,60 @@
 
     <data>
 
+        <!-- VIDEOJUEGO -->
+
+
+        <record model="ir.actions.act_window" id="action_videojuego">
+            <field name="name">videojuego</field>
+            <field name="res_model">examen.videojuego</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model='ir.ui.view' id='videojuego_tree_view'>
+            <field name="name">videojuego.tree</field>
+            <field name="model">examen.videojuego</field>
+            <field name="arch" type="xml">
+                <tree string="Videojuego Tree">
+                    <field name="name"/>
+                    <field name="precio"/>
+                    <field name="numeroUnidades"/>
+                    <field name="dineroGenerado"/>
+                    <field name="capturas"/>
+                    <field name="compania_id"/>
+                    <field name="saga_id"/>
+                    <field name="genero_id"/>
+                    <field name="consola_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='videojuego_form_view'>
+            <field name="name">videojuego.form</field>
+            <field name="model">examen.videojuego</field>
+            <field name="arch" type="xml">
+                <form string="Videojuego Form">
+                    <header>
+                        <button string="Captura" type="object" name="modificarCaptura" class="oe_highlight"/>
+                    </header>
+                    <group>
+                        <field name="name"/>
+                        <field name="precio"/>
+                        <field name="numeroUnidades"/>
+                        <field name="dineroGenerado"/>
+                        <field name="capturas"/>
+                        <field name="compania_id"/>
+                        <field name="saga_id"/>
+                        <field name="genero_id"/>
+                        <field name="consola_id"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
 
         <!-- Top menu item -->
 
-        <menuitem name="Colegio1" id="menu_root"/>
+        <menuitem name="Examen" id="menu_root"/>
 
         <!-- menu categories -->
 
@@ -13,9 +63,7 @@
 
         <!-- actions -->
 
-        <menuitem name="colegio" id="menu_colegio" parent="menu" action="action_colegio"/>
-        <menuitem name="clase" id="menu_clase" parent="menu" action="action_clase"/>
-        <menuitem name="estudiante" id="menu_estudiante" parent="menu" action="action_estudiante"/>
+        <menuitem name="videojuego" id="menu_videojuego" parent="menu" action="action_videojuego"/>
 
     </data>
 
