@@ -2,6 +2,77 @@
 
     <data>
 
+         <!-- CONSOLA -->
+
+
+        <record model="ir.actions.act_window" id="action_compania">
+            <field name="name">consola</field>
+            <field name="res_model">examen.consola</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model='ir.ui.view' id='compania_tree_view'>
+            <field name="name">consola.tree</field>
+            <field name="model">examen.consola</field>
+            <field name="arch" type="xml">
+                <tree string="Compania Tree">
+                    <field name="nombreEntidad"/>
+                    <field name="name"/>
+                    <field name="videojuego_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='compania_form_view'>
+            <field name="name">consola.form</field>
+            <field name="model">examen.consola</field>
+            <field name="arch" type="xml">
+                <form string="Compania Form">
+                    <group>
+                        <field name="nombreEntidad"/>
+                        <field name="name"/>
+                        <field name="videojuego_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- CONSOLA -->
+
+
+        <record model="ir.actions.act_window" id="action_consola">
+            <field name="name">consola</field>
+            <field name="res_model">examen.consola</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model='ir.ui.view' id='consola_tree_view'>
+            <field name="name">consola.tree</field>
+            <field name="model">examen.consola</field>
+            <field name="arch" type="xml">
+                <tree string="Consola Tree">
+                    <field name="nombreEntidad"/>
+                    <field name="name"/>
+                    <field name="videojuego_ids"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model='ir.ui.view' id='consola_form_view'>
+            <field name="name">consola.form</field>
+            <field name="model">examen.consola</field>
+            <field name="arch" type="xml">
+                <form string="Consola Form">
+                    <group>
+                        <field name="nombreEntidad"/>
+                        <field name="name"/>
+                        <field name="videojuego_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
         <!-- VIDEOJUEGO -->
 
 
@@ -64,6 +135,8 @@
         <!-- actions -->
 
         <menuitem name="videojuego" id="menu_videojuego" parent="menu" action="action_videojuego"/>
+        <menuitem name="consola" id="menu_consola" parent="menu" action="action_consola"/>
+        <menuitem name="compania" id="menu_compania" parent="menu" action="action_compania"/>
 
     </data>
 
